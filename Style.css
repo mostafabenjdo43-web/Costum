@@ -1,0 +1,106 @@
+/* ------------------------------------- */
+/* التنسيقات العامة (للهاتف أولاً) */
+/* ------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    direction: rtl; /* لدعم اللغة العربية */
+    text-align: right;
+}
+
+header {
+    background-color: #007bff; /* لون أزرق جذاب */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+/* ------------------------------------- */
+/* بطاقات الإحصائيات (Stat Cards) */
+/* ------------------------------------- */
+.stats-container {
+    display: flex; /* استخدام فليكس بوكس */
+    flex-direction: column; /* جعل البطاقات فوق بعضها في الهاتف */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.stat-card p {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* ------------------------------------- */
+/* الجدول */
+/* ------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* لمنع تجاوز الحدود */
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: bold;
+}
+
+/* ------------------------------------- */
+/* Media Queries (للحاسوب المكتبي والتابلت) */
+/* ------------------------------------- */
+@media (min-width: 768px) {
+    
+    /* عرض متجاور للبطاقات على الشاشات الكبيرة */
+    .stats-container {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    /* جعل كل بطاقة تشغل ثلث العرض تقريباً */
+    .stat-card {
+        flex: 1; 
+        margin: 0 10px;
+    }
+    
+    /* جعل الجدول يبدو أفضل على الشاشات العريضة */
+    #recent-inventory {
+        padding: 0 50px;
+    }
+}
